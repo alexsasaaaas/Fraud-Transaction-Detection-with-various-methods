@@ -9,6 +9,8 @@
 本專案不是只把模型 train 好就結束的 Kaggle 專案。  
 而是從 EDA 看到詐騙行為模式 → 快速試各種不平衡處理與 ensemble 模型 → 最後把機率轉成 **真的能用的風險分數與決策規則**。
 
+使用的 dataset :https://www.kaggle.com/datasets/sanskar457/fraud-transaction-detection/data
+
 
 ### 專案快速概覽
 
