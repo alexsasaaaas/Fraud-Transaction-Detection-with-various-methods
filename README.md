@@ -7,9 +7,9 @@
 在數位金融與 AI 科技持續發展的背景下，網路銀行與行動銀行亟需強化交易安全機制，並建立即時通知系統，以提醒用戶潛在的交易風險，確保服務的信任度與永續發展。
 
 本專案不是只把模型 train 好就結束的 Kaggle 專案。  
-而是從 EDA 看到詐騙行為模式 → 快速試各種不平衡處理與 ensemble 模型 → 最後把機率轉成 **真的能用的風險分數與決策規則**。
+而是從 EDA 看到詐騙行為模式 → 快速試各種不平衡處理與 Ensemble 模型 → 最後把機率轉成 **真的能用的風險分數與決策規則**。
 
-使用的 dataset : https://www.kaggle.com/datasets/sanskar457/fraud-transaction-detection/data
+使用的 Dataset : https://www.kaggle.com/datasets/sanskar457/fraud-transaction-detection/data
 
 根據預測模型所標記之資料，搭配 SQL 以及 Tableau 建立之即時監控儀表板 ( 由於 Tableau Public 不支援連接 MySQL 伺服器，故以下僅做 Demo 用 ) :
 
@@ -23,7 +23,7 @@ https://public.tableau.com/views/_17721810103620/sheet15?:language=zh-TW&:sid=&:
 
 - **目標**：在極不平衡的交易資料中，穩定抓到詐騙，同時讓風控團隊看得懂、好調整門檻。
 - **資料**：Final Transactions.csv（約 175 萬筆，時間、客戶、金額等等全都有）。
-- **核心方法**：根據Chen, T., Sun, R., Ma, T., & Sergeev, S. (2026) 的文獻內容，比較Ensemble 方法以及 Ensemble + Hybird 方法，實驗各種方法對於預估詐騙機率，並完整比較。
+- **核心方法**：根據Chen, T., Sun, R., Ma, T., & Sergeev, S. (2026) 的文獻內容，比較 Ensemble 方法以及 Ensemble + Hybird 方法，實驗各種方法對於預估詐騙機率，並完整比較。
 - **最終產出**：每筆交易一個 0~1 的 Risk Score，搭配 Low/Medium/High 分級 + 對應決策建議。
 
 ### 專案重點
@@ -44,7 +44,7 @@ https://public.tableau.com/views/_17721810103620/sheet15?:language=zh-TW&:sid=&:
 
 3. **final_gbdt_ensemble.ipynb**  
    三個 GBDT 模型（XGBoost + LightGBM + CatBoost）做 soft voting。  
-   結果：ROC-AUC 0.984、F1 0.978、最佳門檻 ≈0.81、訓練只要 10 分鐘。  
+   結果：ROC-AUC : 0.984、F1 : 0.978、最佳門檻 ≈ 0.81、訓練只要 10 分鐘。  
 
 4. **conclusion.ipynb**  
    - Ensemble 還是 Ensemble + Hybird 方法，哪個好？  
