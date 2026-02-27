@@ -12,6 +12,7 @@
 使用的 dataset : https://www.kaggle.com/datasets/sanskar457/fraud-transaction-detection/data
 
 根據預測模型所標記之資料，搭配 SQL 以及 Tableau 建立之即時監控儀表板 ( 由於 Tableau Public 不支援連接 MySQL 伺服器，故以下僅做 Demo 用 ) :
+
 即時風險監控儀表板:
 https://public.tableau.com/views/_17721809093490/sheet14?:language=zh-TW&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
