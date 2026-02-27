@@ -9,8 +9,14 @@
 本專案不是只把模型 train 好就結束的 Kaggle 專案。  
 而是從 EDA 看到詐騙行為模式 → 快速試各種不平衡處理與 ensemble 模型 → 最後把機率轉成 **真的能用的風險分數與決策規則**。
 
-使用的 dataset :https://www.kaggle.com/datasets/sanskar457/fraud-transaction-detection/data
+使用的 dataset : https://www.kaggle.com/datasets/sanskar457/fraud-transaction-detection/data
 
+根據預測模型所標記之資料，搭配 SQL 以及 Tableau 建立之即時監控儀表板 ( 由於 Tableau Public 不支援連接 MySQL 伺服器，故以下僅做 Demo 用 ) :
+即時風險監控儀表板:
+https://public.tableau.com/views/_17721809093490/sheet14?:language=zh-TW&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
+模型效能監控儀表板:
+https://public.tableau.com/views/_17721810103620/sheet15?:language=zh-TW&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 ### 專案快速概覽
 
