@@ -47,9 +47,8 @@ https://public.tableau.com/views/_17721810103620/sheet15?:language=zh-TW&:sid=&:
    結果：ROC-AUC 0.984、F1 0.978、最佳門檻 ≈0.81、訓練只要 10 分鐘。  
 
 4. **conclusion.ipynb**  
-   直接給你比較表：  
-   - 哪個方法 F1 最高？  
-   - 哪個門檻最穩定（不會調到 0.99 才好看）？  
+   - Ensemble 還是 Ensemble + Hybird 方法，哪個好？  
+   - 哪個門檻最穩定？  
    - 訓練時間差多少？  
    結論：**GBDT Ensemble 贏在實務性**。
 
@@ -58,7 +57,7 @@ https://public.tableau.com/views/_17721810103620/sheet15?:language=zh-TW&:sid=&:
    把模型機率 + 統計異常 + 行為異常 → 加權變成 Hybrid Risk Score（0~1）。  
    再切成 Low / Medium / High 三級：  
    - Low Risk：Fraud Rate ≈0.6% → 直接放行  
-   - Medium Risk：Fraud Rate ≈99% → 強制 OTP / 人工審  
+   - Medium Risk：Fraud Rate ≈99% → 強制 OTP / 人工審查
    - High Risk：Fraud Rate 100% → 自動鎖卡  
 
 ### 專案 insight
